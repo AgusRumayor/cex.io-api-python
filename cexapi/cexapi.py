@@ -64,6 +64,9 @@ class API(object):
 
     def balance(self):
         return self.api_call('balance', {}, 1)
+    
+    def fee(self):
+	return self.api_call('get_myfee', {}, 1)
 
     def current_orders(self, couple='GHS/BTC'):
         return self.api_call('open_orders', {}, 1, couple)
